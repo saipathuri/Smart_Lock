@@ -1,0 +1,156 @@
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {background-color: #ccc;}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%; 
+}
+
+.content {
+	min-height: 100%;
+	position: relative;
+	overflow: auto;
+	z-index: 0; 
+}
+
+.background {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.top_block {
+	width: 100%;
+	display: block; 
+}
+
+.bottom_block {
+	position: absolute;
+	width: 100%;
+	display: block;
+	bottom: 0; 
+}
+
+.left_block {
+	display: block;
+	float: left; 
+}
+
+.left_content {
+	min-height: 100%;
+	position: relative;
+	overflow: auto;
+	z-index: 0; 
+	float: right;
+}
+.right_block {
+	display: block;
+	float: right; 
+}
+
+.right_content {
+	min-height: 100%;
+	position: relative;
+	overflow: auto;
+	z-index: 0; 
+	float: left;
+}
+.center_block {
+	display: block;
+	width: auto; 
+}
+
+.header_block {
+	width: 100%;
+	height: 70px;
+	background-color: #C17767;
+	text-align: center;
+}
+
+.background.left_block {
+	height: auto !important;
+	padding-bottom: 0;
+	left: 0;
+	width: 49.5%;
+	background-color: #8C4843;
+	margin-top: 70px; 
+}
+
+.left_block {
+	height: auto;
+	width: 49.5%;
+	padding-bottom: 0px;
+	/*float: right;*/
+}
+
+.background.right_block {
+	height: auto !important;
+	padding-bottom: 0;
+	right: 0;
+	width: 49.5%;
+	background-color: #8C4843;
+	margin-top: 70px; 
+}
+
+.right_block {
+	height: auto;
+	width: 49.5%;
+	padding-bottom: 0px;
+}
+
+.background.divider_block {
+	height: auto !important;
+	padding-bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #8C4843;
+	margin-top: 70px;
+	margin-left: 935px;
+	margin-right: 952px; 
+}
+
+.divider_block {
+	width: 1.1%;
+	height: auto;
+	padding-bottom: 0px;
+}

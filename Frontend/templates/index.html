@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+	<script src="{{ url_for('static', filename='input.js') }}"></script>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index_layout.css') }}">
+	
+	<title>Access Control Console</title>
+</head>
+<body onload="codeAddress();">
+	<ul class="tab">
+		<li><a href="#" class="tablinks" onclick="openTab(event, 'Access List')">Access List</a></li>
+		<li><a href="#" class="tablinks" onclick="openTab(event, 'Settings')">Settings</a></li>
+	</ul>
+
+	<div id="Access List" class="tabcontent" id = "access_list">
+		<div class="content">
+			<div class="top_block header_block">
+				<div class="content">
+					<h1> Add/Remove Users </h1>
+				</div>
+			</div>
+			<div class="background left_block">
+			</div>
+			<div class="left_block">
+				<div class="left_content">
+					<form action='/add/'>
+						Name:<br>
+						<input type="text" name="name" id="name">
+						<br>
+						MAC Address:<br>
+						<input type="text" name="macaddress" id="mac_address">
+						<br><br>
+						<input type="submit" value="Submit" onclick="retrieve('name', 'mac_address')">
+					</form>
+				</div>
+			</div>
+			<div class="background right_block">
+			</div>
+			<div class="right_block">
+				<div class="content">
+					{{ user_table }}
+				</div>
+			</div>
+			<div class="background divider_block">
+			</div>
+			<div class="center_block divider_block">
+				<div class="content">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="Settings" class="tabcontent" id = "settings">
+  		<h3>Update Time</h3>
+		<p>Enter the time of the month you would like to update your smart-lock</p>
+		Current time is: {{ update_time }}
+		<form action='/update/'>
+			Day:<br>
+			<input type="text" name="day" id="day">
+			<br>
+			Hour:<br>
+			<input type="text" name="hour" id="hour">
+			<br>
+			Minute:<br>
+			<input type="text" name="minute" id="minute">
+			<br><br>
+			<input type="submit" value="Submit">
+		</form> 
+	</div>
+</body>
+</html>
