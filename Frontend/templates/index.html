@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <head>
-	<script src="{{ url_for('static', filename='input.js') }}"></script>
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index_layout.css') }}">
 	
 	<title>Access Control Console</title>
 </head>
+<title>My Application</title>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+{% block body %}{% endblock %}
 <body onload="codeAddress();">
 	<ul class="tab">
 		<li><a href="#" class="tablinks" onclick="openTab(event, 'Access List')">Access List</a></li>
@@ -18,6 +28,9 @@
 			<div class="top_block header_block">
 				<div class="content">
 					<h1> Add/Remove Users </h1>
+					{% if error %}
+    					<p class=error><strong>Error:</strong> {{ error }}
+  					{% endif %}
 				</div>
 			</div>
 			<div class="background left_block">
@@ -51,22 +64,29 @@
 		</div>
 	</div>
 
-	<div id="Settings" class="tabcontent" id = "settings">
+	<div id="Settings" class="tabcontent" enctype="application/x-www-form-urlencoded">
   		<h3>Update Time</h3>
 		<p>Enter the time of the month you would like to update your smart-lock</p>
 		Current time is: {{ update_time }}
 		<form action='/update/'>
 			Day:<br>
-			<input type="text" name="day" id="day">
+			<select name="day" id="day">
+  				<option>Choose a number</option>
+			</select>
 			<br>
 			Hour:<br>
-			<input type="text" name="hour" id="hour">
+			<select name="hour" id="hour">
+  				<option>Choose a number</option>
+			</select>
 			<br>
 			Minute:<br>
-			<input type="text" name="minute" id="minute">
+			<select name="minute" id="minute">
+  				<option>Choose a number</option>
+			</select>
 			<br><br>
 			<input type="submit" value="Submit">
 		</form> 
 	</div>
 </body>
+<script src="{{ url_for('static', filename='input.js') }}"></script>
 </html>

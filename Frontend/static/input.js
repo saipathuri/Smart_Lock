@@ -29,3 +29,36 @@ function openTab(evt, tabName) {
 function codeAddress() {
 			openTab(event, 'Access List')
         }
+
+//populate lists for update
+var day = document.getElementById("day");
+var hour = document.getElementById("hour");
+var minute = document.getElementById("minute");
+
+var days = 28;
+var hours = 24;
+var minutes = 4;
+
+for (var i = 1; i <= days; i++) {
+   var opt = i;
+   var el = document.createElement("option");
+   el.textContent = opt;
+   el.value = opt;
+   day.appendChild(el)
+}
+
+for (var i = 1; i <= hours; i++) {
+   var opt = i;
+   var el = document.createElement("option");
+   el.textContent = opt;
+   el.value = opt;
+   hour.appendChild(el)
+}
+
+for (var i = 0; i < minutes; i++) {
+   var opt = i*15;
+   var el = document.createElement("option");
+   el.textContent = opt;
+   el.value = opt;
+   minute.appendChild(el)
+}
