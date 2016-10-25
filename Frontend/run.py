@@ -1,10 +1,14 @@
-from flask import Flask, render_template, request, Markup, redirect, url_for
+from flask import Flask, render_template, request, Markup, redirect, url_for, flash
 from flask_table import Table, Col
 import table
 import access_manager as cred
 import string
+import re
 
 app = Flask(__name__)
+app.secret_key = "don't tell anyone"
+
+mac_regex = re.compile("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$")
 
 @app.route('/')
 def index():
@@ -35,11 +39,24 @@ def add():
 		print("\n no credentials found \n")
 
 	if name:
-		cred.users[name] = mac_address.lower()
-		cred.write_to_file()
-		print "\n"
-		print cred.users
-		print "\n"
+		try:
+			if mac_address == mac_regex.match(mac_address).group():
+				cred.users[name] = mac_address.lower()
+				cred.write_to_file()
+				print "\n"
+				print cred.users
+				print "\n"
+		except AttributeError:
+				"""
+				alert user invalid mac
+				"""
+				flash("Invalid MAC Address, must be in format: AA:BB:CC:DD:EE:FF")
+	else:
+		"""
+		alert user no name
+		"""
+		flash("Must enter a name for the device")
+
 	return redirect(url_for('home'))
 
 @app.route('/remove/', methods = ['POST'])
