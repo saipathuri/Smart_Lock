@@ -1,3 +1,4 @@
 *.pyc
 Frontend/env
 *.bak
+/logs/

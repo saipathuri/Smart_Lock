@@ -8398,3 +8398,395 @@ Door remains locked.
 
 //////////    11/14/2016 08:49:13 PM    //////////
 Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:16 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:18 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:21 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:23 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:26 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:28 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:31 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:34 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:36 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:38 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:41 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:43 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:46 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:48 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:51 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:53 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:56 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:49:58 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:01 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:03 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:06 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:08 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:11 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:13 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:16 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:18 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:21 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:23 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:25 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:28 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:30 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:33 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:35 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:38 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:40 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:43 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:45 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:48 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:50 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:52 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:55 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:50:58 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:51:00 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:51:02 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:51:05 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:51:07 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:51:10 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:51:12 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:51:14 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:51:17 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:51:19 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:51:22 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:51:24 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:51:27 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:51:29 PM    //////////
+Scanning all devices on local network.
+1 devices have been found.
+Comparing devices on network with ACL.
+Door remains locked.
+//////////////////////////////////////////////////
+
+//////////    11/14/2016 08:51:31 PM    //////////
+Scanning all devices on local network.
