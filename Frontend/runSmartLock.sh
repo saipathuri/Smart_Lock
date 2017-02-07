@@ -9,7 +9,7 @@ scan ()
 	macAddrFile="$2"
 	ACLFile="$3"
 	
-	if [[ ! $(ifconfig | grep 'wlan0') ]]
+	if [[ ! $(ifconfig | grep 'wlan0') ]] || [[ ! $(arp-scan -l 2>/dev/null | grep 'ioctl: No such device') ]]
 	then
 		echo "Error! Not connected to wireless network"
 		sleep 2
