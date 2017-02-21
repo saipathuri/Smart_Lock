@@ -5,5 +5,6 @@ Install the following dependencies through pip in a virtualenvironment:
 
   * flask
   * flask-table
+  * pigpio
 
 Then run run.py and go to localhost:5000
