@@ -1,24 +1,23 @@
-from flask import Flask, render_template, request, Markup, redirect, url_for, flash
+from flask import Flask, render_template, request, Markup, redirect, url_for, flash, Response
 from flask_table import Table, Col
 import table
 import access_manager as cred
 import string
 import re
+from flask_bootstrap import Bootstrap
+import auth_test
 
-app = Flask(__name__)
+def create_app():
+	app = Flask(__name__)
+	Bootstrap(app)
+	return app
+
+app = create_app()
 app.secret_key = "don't tell anyone"
-
 mac_regex = re.compile("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$")
 
 @app.route('/')
-def index():
-	return redirect(url_for('home'))
-
-# @app.route('/#')
-# def tab_fix():
-# 	return redirect(url_for('home'))
-
-@app.route('/home/')
+@auth_test.requires_auth
 def home():
 	cred.read_file()
 	update_date = cred.get_date()
@@ -26,7 +25,7 @@ def home():
 		update_date = "Day " + str(update_date[0]) + " at " + str(update_date[1]) + ":" + str(update_date[2])
 	else: 
 		update_date = "No update date set"
-	return render_template('index.html', user_table=Markup(table.generate_table().__html__()), update_time = update_date)
+	return render_template('index_new.html', user_table=Markup(table.generate_table().__html__()), update_time = update_date)
 
 @app.route('/add/', methods = ['POST', 'GET'])
 def add():
@@ -71,6 +70,8 @@ def update():
 	day = request.args.get('day')
 	hour = request.args.get('hour')
 	minute = request.args.get('minute')
+	if minute == u'0':
+		minute = u'00'
 	cred.update_date(day, hour, minute)
 	return redirect(url_for('home'))
 

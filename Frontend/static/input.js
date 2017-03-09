@@ -35,6 +35,8 @@ var day = document.getElementById("day");
 var hour = document.getElementById("hour");
 var minute = document.getElementById("minute");
 
+var el = document.createElement("option");
+
 var days = 28;
 var hours = 24;
 var minutes = 4;
@@ -44,6 +46,7 @@ for (var i = 1; i <= days; i++) {
    var el = document.createElement("option");
    el.textContent = opt;
    el.value = opt;
+   el.style = "color:black"
    day.appendChild(el)
 }
 

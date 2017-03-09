@@ -1,3 +1,8 @@
 *.pyc
-Frontend/env
+Frontend/bin
+Frontend/lib
+Frontend/include
+pip-selfcheck.json
+Frontend/.Python
 *.bak
+*.txt
