@@ -6,3 +6,4 @@ pip-selfcheck.json
 Frontend/.Python
 *.bak
 *.txt
+/logs/
