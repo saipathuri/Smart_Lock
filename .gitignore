@@ -7,3 +7,4 @@ Frontend/.Python
 *.bak
 *.txt
 /logs/
+!Frontend/requirements.txt

@@ -6,6 +6,7 @@ import access_manager as cred
 class ItemTable(Table):
     name = Col('Name')
     description = Col('MAC Address')
+    
     remove = ButtonCol('Remove', 'remove', url_kwargs=dict(key='name'), column_html_attrs={'class': 'button'})
 
 # Get some objects
