@@ -50,7 +50,7 @@ for (var i = 1; i <= days; i++) {
    day.appendChild(el)
 }
 
-for (var i = 1; i <= hours; i++) {
+for (var i = 0; i < hours; i++) {
    var opt = i;
    var el = document.createElement("option");
    el.textContent = opt;

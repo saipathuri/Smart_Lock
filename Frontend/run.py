@@ -6,6 +6,8 @@ import string
 import re
 from flask_bootstrap import Bootstrap
 import auth_test
+import datetime
+import calendar
 
 def create_app():
 	app = Flask(__name__)
@@ -20,12 +22,13 @@ mac_regex = re.compile("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$")
 @auth_test.requires_auth
 def home():
 	cred.read_file()
-	update_date = cred.get_date()
-	if update_date:
-		update_date = "Day " + str(update_date[0]) + " at " + str(update_date[1]) + ":" + str(update_date[2])
+	update_date_arr = cred.get_date()
+	month = calendar.month_name[datetime.date.today().month]
+	if update_date_arr:
+		update_date_str = month + ' ' + str(update_date_arr[0]) + " at " + str(update_date_arr[1]) + ":" + str(update_date_arr[2])
 	else: 
-		update_date = "No update date set"
-	return render_template('index_new.html', user_table=Markup(table.generate_table().__html__()), update_time = update_date)
+		update_date_str = "No update date set"
+	return render_template('index_new.html', user_table=Markup(table.generate_table().__html__()), update_time = update_date_str)
 
 @app.route('/add/', methods = ['POST', 'GET'])
 def add():

@@ -51,7 +51,7 @@ def update_date(day, hour, minute):
 	file.close()
 
 def update_date(day, hour, minute):
-	file = open(update_file_location, 'w')
+	file = open(update_location, 'w')
 	file.write(day + '\n')
 	file.write(hour + '\n')
 	file.write(minute)
@@ -67,7 +67,7 @@ def get_date():
 		file.close()
 		return update_date_str
 	except:
-		update_date('1','1','1')
+		update_date('1','1','00')
 		get_date()
 	return update_date
 
