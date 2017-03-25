@@ -64,7 +64,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#chart">Log</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#acl">Add Device</a>
@@ -80,6 +80,9 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
                     </li>
                 </ul>
             </div>
@@ -106,16 +109,17 @@
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About Smart Lock</h2>
-                <p>Smart Lock is an open source Raspberry Pi Smart Lock designed by a team at UT Dallas. Scroll <a class="page-scroll" href="#page-top">above</a> to get started.</p>
-                <p>Smart Lock is open source. Visit <a href="https://www.github.com/saipathuri/Smart_Lock"> here</a> for more information.
-            </div>
-        </div>
-    </section>
+
+<!-- Chart -->
+<section id="chart" class="container content-section text-center">
+    <div id="user_chart" class="tabcontent" enctype="application/x-www-form-urlencoded">
+            <div class="ct-chart ct-octave"></div>
+            
+            <script type="text/javascript" src="{{ url_for('static', filename='chartData.json') }}"></script>
+            <script type="text/javascript" src="{{ url_for('static', filename='chart.js') }}"></script>
+    </div>
+</section>
+
 <!-- Settings Section -->
 <div class="setting_block">
     <!-- ACL Section -->
@@ -184,24 +188,24 @@
     </div>
 </div>
 
-<!-- Passwored Section -->
-<section id="password" class="container content-section text-center">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h2> Change Password </h2>
-            {{ pw_status }}
-            <form action='/update_password/'>
-                    Current Password:<br>
-                    <input type="password" name="current_password" id="current_password" style="color:black">
-                    <br>
-                    New Password:<br>
-                    <input type="password" name="new_password" id="new_password" style="color:black">
-                    <br><br>
-                    <input type="submit" value="Submit" style="color:black">
-            </form>
+    <!-- Password Section -->
+    <section id="password" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2> Change Password </h2>
+                {{ pw_status }}
+                <form action='/update_password/'>
+                        Current Password:<br>
+                        <input type="password" name="current_password" id="current_password" style="color:black">
+                        <br>
+                        New Password:<br>
+                        <input type="password" name="new_password" id="new_password" style="color:black">
+                        <br><br>
+                        <input type="submit" value="Submit" style="color:black">
+                </form>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- Contact Section -->
@@ -218,6 +222,17 @@
                     </li>
     
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Smart Lock</h2>
+                <p>Smart Lock is an open source Raspberry Pi Smart Lock designed by a team at UT Dallas. Scroll <a class="page-scroll" href="#page-top">above</a> to get started.</p>
+                <p>Smart Lock is open source. Visit <a href="https://www.github.com/saipathuri/Smart_Lock"> here</a> for more information.
             </div>
         </div>
     </section>
@@ -247,6 +262,10 @@
 
     <!-- Update List Populator-->
     <script src="{{ url_for('static', filename='input.js') }}"></script>
+
+    <!-- Chartist -->
+    <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <link href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css" />
 </body>
 
 </html>

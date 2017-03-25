@@ -1,6 +1,6 @@
 var textFromFile = "";
 var rawFile = new XMLHttpRequest();
-rawFile.open("GET", "file:///Smart_Lock/Frontend/numberToUserTable.txt", false);
+rawFile.open("GET", "static/numberToUserTable.txt", false);
 rawFile.onreadystatechange = function ()
 {
 	if(rawFile.readyState === 4 && (rawFile.status === 200 || rawFile.status == 0))
