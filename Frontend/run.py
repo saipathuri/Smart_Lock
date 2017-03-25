@@ -78,5 +78,20 @@ def update():
 	cred.update_date(day, hour, minute)
 	return redirect(url_for('home'))
 
+@app.route('/update_password/', methods = ['POST', 'GET'])
+def update_password():
+	new_password = request.args.get('new_password')
+	current_password = request.args.get('current_password')
+
+	status = ''
+
+	if auth_test._verify(current_password):
+		auth_test.set_password(new_password)
+		flash('Password updated')
+	else:
+		flash('You entered the wrong password')
+
+	return redirect(url_for('home'))
+
 if __name__ == '__main__':
     app.run(debug=True)

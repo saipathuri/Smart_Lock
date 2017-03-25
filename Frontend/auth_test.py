@@ -1,10 +1,17 @@
 from functools import wraps
 from flask import request, Response
-def check_auth(username, password):
+from passlib.hash import pbkdf2_sha256
+
+username = 'admin'
+
+#password should always be a hash
+password = ''
+
+def check_auth(username_to_check, password_to_check):
     """This function is called to check if a username /
     password combination is valid.
     """
-    return username == 'admin' and password == 'secret'
+    return username_to_check == username and _verify(password_to_check)
 
 def authenticate():
     """Sends a 401 response that enables basic auth"""
@@ -21,3 +28,24 @@ def requires_auth(f):
             return authenticate()
         return f(*args, **kwargs)
     return decorated
+
+def set_password(password_to_set):
+    password = _hash(password_to_set)
+    pw_file = open('password.txt', 'w')
+    pw_file.write(password)
+    pw_file.close()
+
+def _hash(password):
+    hash = pbkdf2_sha256.hash(password, rounds=50000, salt_size=16)
+    return hash
+
+def _verify(password_to_verify):
+    return pbkdf2_sha256.verify(password_to_verify, password)
+
+
+try:
+    password = open('password.txt').read()
+    print 'loaded password from file'
+except:
+    set_password('password')
+    print 'password file not found. setting default password'
