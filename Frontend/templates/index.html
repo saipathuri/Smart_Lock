@@ -3,7 +3,8 @@
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index_layout.css') }}">
-	
+	<script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+	<link href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css" />
 	<title>Access Control Console</title>
 </head>
 <title>My Application</title>
@@ -21,6 +22,7 @@
 	<ul class="tab">
 		<li><a href="#" class="tablinks" onclick="openTab(event, 'Access List')">Access List</a></li>
 		<li><a href="#" class="tablinks" onclick="openTab(event, 'Settings')">Settings</a></li>
+		<li><a href="#" class="tablinks" onclick="openTab(event, 'Chart')">Chart</a></li>
 	</ul>
 
 	<div id="Access List" class="tabcontent" id = "access_list">
@@ -62,9 +64,8 @@
 				</div>
 			</div>
 		</div>
-		<a href="localhost:5000/test_home/"> Click here for new page </a>
 	</div>
-
+	
 	<div id="Settings" class="tabcontent" enctype="application/x-www-form-urlencoded">
   		<h3>Update Time</h3>
 		<p>Enter the time of the month you would like to update your smart-lock</p>
@@ -86,7 +87,14 @@
 			</select>
 			<br><br>
 			<input type="submit" value="Submit">
-		</form> 
+		</form>
+	</div>
+
+	<div id="Chart" class="tabcontent" enctype="application/x-www-form-urlencoded">
+		<div class="ct-chart ct-octave"></div>
+		
+		<script type="text/javascript" src="chartData.json"></script>
+		<script type="text/javascript" src="chart.js"></script>
 	</div>
 </body>
 <script src="{{ url_for('static', filename='input.js') }}"></script>
