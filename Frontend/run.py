@@ -5,7 +5,7 @@ import access_manager as cred
 import string
 import re
 from flask_bootstrap import Bootstrap
-import auth_test
+import auth
 import datetime
 import calendar
 
@@ -19,7 +19,7 @@ app.secret_key = "don't tell anyone"
 mac_regex = re.compile("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$")
 
 @app.route('/')
-@auth_test.requires_auth
+@auth.requires_auth
 def home():
 	cred.read_file()
 	update_date_arr = cred.get_date()
@@ -52,12 +52,12 @@ def add():
 				"""
 				alert user invalid mac
 				"""
-				flash("Invalid MAC Address, must be in format: AA:BB:CC:DD:EE:FF")
+				flash("Invalid MAC Address, must be in format: AA:BB:CC:DD:EE:FF", 'add')
 	else:
 		"""
 		alert user no name
 		"""
-		flash("Must enter a name for the device")
+		flash("Must enter a name for the device", 'add')
 
 	return redirect(url_for('home'))
 
@@ -85,11 +85,11 @@ def update_password():
 
 	status = ''
 
-	if auth_test._verify(current_password):
-		auth_test.set_password(new_password)
-		flash('Password updated')
+	if auth._verify(current_password):
+		auth.set_password(new_password)
+		flash('Password updated', 'auth')
 	else:
-		flash('You entered the wrong password')
+		flash('You entered the wrong password', 'auth')
 
 	return redirect(url_for('home'))
 

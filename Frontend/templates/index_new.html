@@ -10,20 +10,8 @@
     <meta name="author" content="Sai Pathuri">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
-    <title>Access Control Console</title>
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            <ul class=flashes>
-            {% for message in messages %}
-              <li>{{ message }}</li>
-            {% endfor %}
-            </ul>
-        {% endif %}
-    {% endwith %}
-    {% block body %}{% endblock %}
-
     <!-- Bootstrap Core CSS -->
-    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -32,6 +20,11 @@
 
     <!-- Theme CSS -->
     <link href="static/css/grayscale.css" rel="stylesheet">
+
+    <!-- Chartist CSS/JS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/chartist/dist/chartist.css') }}">
+
+    <script src="{{ url_for('static', filename='bower_components/chartist/dist/chartist.min.js') }}"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,7 +45,7 @@
                     Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i> <span class="light">Analyzer</span>
+                    <i class="fa fa-play-circle"></i> <span class="light">Smart Lock</span>
                 </a>
             </div>
 
@@ -109,22 +102,40 @@
         </div>
     </header>
 
-
-<!-- Chart -->
-<section id="chart" class="container content-section text-center">
-    <div id="user_chart" class="tabcontent" enctype="application/x-www-form-urlencoded">
-            <div class="ct-chart ct-octave"></div>
-            
-            <script type="text/javascript" src="{{ url_for('static', filename='chartData.json') }}"></script>
-            <script type="text/javascript" src="{{ url_for('static', filename='chart.js') }}"></script>
-    </div>
-</section>
+    <section id="chart" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Access Log</h2>
+                <div id="user_chart" class="tabcontent" enctype="application/x-www-form-urlencoded">
+                    <div class="ct-chart ct-octave"></div>
+                
+                    <script type="text/javascript" src="{{ url_for('static', filename='chartData.json') }}"></script>
+                    <script type="text/javascript" src="{{ url_for('static', filename='chart.js') }}"></script>
+                </div>
+                <br>
+            </div>
+        </div>
+    </section>
 
 <!-- Settings Section -->
 <div class="setting_block">
     <!-- ACL Section -->
     <div class="setting_row">
         <section id="acl" class="container content-section text-center">
+            <div class="container" style="min-height:100% width:80%">
+            {% with messages = get_flashed_messages(category_filter=['add']) %}
+              {% if messages %}
+                {% for message in messages %}
+                  <div class="alert alert-warning alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    {{message}}
+                  </div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+            
+            {% block body %}{% endblock %}
+            </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2> Add Trusted Device </h2>
@@ -190,11 +201,25 @@
 
     <!-- Password Section -->
     <section id="password" class="container content-section text-center">
+        <div class="container" style="min-height:100% width:80%">
+        {% with messages = get_flashed_messages(category_filter=['auth']) %}
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-warning alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                {{message}}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+        
+        {% block body1 %}{% endblock %}
+        </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2> Change Password </h2>
                 {{ pw_status }}
-                <form action='/update_password/'>
+                <form action='/update_password/#password'>
                         Current Password:<br>
                         <input type="password" name="current_password" id="current_password" style="color:black">
                         <br>
@@ -212,6 +237,9 @@
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
+                <br>
+                <br>
+                <br>
                 <h2>Contact Smart Lock Team</h2>
                 <p>Feel free to email us to provide some feedback on this software, give us suggestions for new features, or to just say hello!</p>
                 <p><a href="mailto:ssp141230@utdallas.edu">ssp141230@utdallas.edu</a>
@@ -264,8 +292,9 @@
     <script src="{{ url_for('static', filename='input.js') }}"></script>
 
     <!-- Chartist -->
-    <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-    <link href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css" />
+    <!-- <link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css"> -->
+    <!-- <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <link href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css" /> -->
 </body>
 
 </html>

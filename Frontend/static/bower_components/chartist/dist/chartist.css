@@ -1,6 +1,6 @@
 .ct-label {
-  fill: rgba(0, 0, 0, 0.4);
-  color: rgba(0, 0, 0, 0.4);
+  fill: #ececec;
+  color: #ececec;
   font-size: 0.75rem;
   line-height: 1; }
 
@@ -11,7 +11,8 @@
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex; }
+  display: flex;
+  color: #ececec; }
 
 .ct-chart-pie .ct-label,
 .ct-chart-donut .ct-label {
@@ -27,7 +28,8 @@
   -ms-flex-pack: flex-start;
   justify-content: flex-start;
   text-align: left;
-  text-anchor: start; }
+  text-anchor: start;
+  stroke:#ececec; }
 
 .ct-label.ct-horizontal.ct-end {
   -webkit-box-align: flex-start;
@@ -39,7 +41,8 @@
   -ms-flex-pack: flex-start;
   justify-content: flex-start;
   text-align: left;
-  text-anchor: start; }
+  text-anchor: start;
+  color:#ececec; }
 
 .ct-label.ct-vertical.ct-start {
   -webkit-box-align: flex-end;
@@ -138,7 +141,7 @@
   text-anchor: end; }
 
 .ct-grid {
-  stroke: rgba(0, 0, 0, 0.2);
+  stroke: #ececec;
   stroke-width: 1px;
   stroke-dasharray: 2px; }
 

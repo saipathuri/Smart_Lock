@@ -119,6 +119,7 @@ textarea {
 }
 button {
   overflow: visible;
+  color: black;
 }
 button,
 select {
@@ -180,7 +181,7 @@ optgroup {
   font-weight: bold;
 }
 table {
-  border-spacing: 0;
+  border-spacing: 50px 10px;
   border-collapse: collapse;
 }
 td,
@@ -2250,6 +2251,7 @@ pre code {
 }
 table {
   background-color: transparent;
+  border-color: white;
 }
 caption {
   padding-top: 8px;
@@ -2259,6 +2261,7 @@ caption {
 }
 th {
   text-align: left;
+  color: white;
 }
 .table {
   width: 100%;
