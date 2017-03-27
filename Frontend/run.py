@@ -50,7 +50,7 @@ def add():
 		name = request.args.get('name')
 		mac_address = request.args.get('macaddress')
 	except:
-		print("\n no credentials found \n")
+		flash("Please enter the device information.", 'add_fail')
 
 	if name:
 		#if the user is already in the system, don't add
