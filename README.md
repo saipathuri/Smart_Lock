@@ -1,10 +1,16 @@
-#Smart Lock
-###Unlock your front door with your smartphone automatically!
-##Frontend Setup
-Install the following dependencies through pip in a virtualenvironment:
+#Smart Lock 
 
-  * flask
-  * flask-table
-  * pigpio
+###Setup 
+Install dependencies by running
 
-Then run run.py and go to localhost:5000
+```
+pip install -r requirements.txt
+```
+
+Then run
+
+```
+sudo ./runSmartLock.sh
+```
+
+Navigate to `locahost:5000`, the default password is `password`
