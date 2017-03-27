@@ -251,7 +251,7 @@
     <!-- Password Section -->
     <section id="password" class="container content-section text-center">
         <div class="container" style="min-height:100% width:80%">
-        {% with messages = get_flashed_messages(category_filter=['fail_auth']) %}
+        {% with messages = get_flashed_messages(category_filter=['auth_fail']) %}
           {% if messages %}
             {% for message in messages %}
               <div class="alert alert-warning alert-dismissible" role="alert">
@@ -265,7 +265,7 @@
         {% block authfail %}{% endblock %}
         </div>
         <div class="container" style="min-height:100% width:80%">
-        {% with messages = get_flashed_messages(category_filter=['success_auth']) %}
+        {% with messages = get_flashed_messages(category_filter=['auth_success']) %}
           {% if messages %}
             {% for message in messages %}
               <div class="alert alert-success alert-dismissible" role="alert">
