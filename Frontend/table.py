@@ -7,7 +7,7 @@ class ItemTable(Table):
     name = Col('Name')
     description = Col('MAC Address')
     classes=['table']
-    remove = ButtonCol('Remove', 'remove', url_kwargs=dict(key='name'))
+    remove = ButtonCol('Remove', 'remove', url_kwargs=dict(key='name'), button_attrs={'class':'btn btn-primary'})
 
 # Get some objects
 class Item(object):
