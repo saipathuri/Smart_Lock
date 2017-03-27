@@ -45,7 +45,5 @@ def _verify(password_to_verify):
 
 try:
     password = open('password.txt').read()
-    print 'loaded password from file'
 except:
     set_password('password')
-    print 'password file not found. setting default password'
