@@ -1,10 +1,10 @@
-#Smart Lock 
+# Smart Lock 
 
-###Setup 
+### Setup 
 Install dependencies by running
 
 ```
-pip install -r requirements.txt
+sudo pip install -r requirements.txt
 ```
 
 Then run
