@@ -1,6 +1,6 @@
-#Smart Lock 
+# Smart Lock 
 
-###Setup 
+### Setup 
 Install dependencies by running
 
 ```
