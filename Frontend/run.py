@@ -23,11 +23,23 @@ mac_regex = re.compile("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$")
 def home():
 	cred.read_file()
 	update_date_arr = cred.get_date()
-	month = calendar.month_name[datetime.date.today().month]
-	if update_date_arr:
+	today_day = datetime.date.today().day
+
+	invalid_entry = False
+	for i in update_date_arr:
+		if i == 'Choose a number':
+			invalid_entry = True
+
+	if not invalid_entry:
+		if(today_day <= int(update_date_arr[0])):
+			month = calendar.month_name[datetime.date.today().month]
+		else:
+			month = calendar.month_name[(datetime.date.today().month+1)%12]
+
+	if update_date_arr and not invalid_entry:
 		update_date_str = month + ' ' + str(update_date_arr[0]) + " at " + str(update_date_arr[1]) + ":" + str(update_date_arr[2])
 	else: 
-		update_date_str = "No update date set"
+		update_date_str = "No update time set, be sure to set all values"
 	return render_template('index_new.html', user_table=Markup(table.generate_table().__html__()), update_time = update_date_str)
 
 @app.route('/add/', methods = ['POST', 'GET'])

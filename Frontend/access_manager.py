@@ -58,16 +58,16 @@ def update_date(day, hour, minute):
 	file.close()
 
 def get_date():
-	update_date_str = None
+	update_date_arr = None
 	try:
 		file = open(update_location)
 		file_contents = file.read()
 		file_by_line = file_contents.split("\n")
-		update_date_str = [i for i in file_by_line]
+		update_date_arr = [i for i in file_by_line]
 		file.close()
-		return update_date_str
+		return update_date_arr
 	except:
 		update_date('1','1','00')
 		get_date()
-	return update_date
+	return update_date_arr
 
