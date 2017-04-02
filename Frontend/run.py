@@ -151,4 +151,4 @@ def update_password():
 	return redirect(url_for('home'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="192.168.2.2")

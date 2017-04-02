@@ -13,13 +13,10 @@ if __name__ == "__main__":
     pi = pigpio.pi()
     if not pi.connected:
         sys.exit()
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(18, GPIO.OUT)
-    p = GPIO.PWM(18,5)
     if sys.argv[1] == 'u':
-        pi.set_servo_pulsewidth(PIN_OUT,1000)
+        pi.set_servo_pulsewidth(PIN_OUT,1200)
     elif sys.argv[1] == 'l':
-        pi.set_servo_pulsewidth(PIN_OUT,2000)
+        pi.set_servo_pulsewidth(PIN_OUT,2100)
     time.sleep(1)
     pi.set_servo_pulsewidth(PIN_OUT,0)
     pi.stop();
