@@ -219,6 +219,8 @@ monthlyUpdate ()
 {
 	echo "Performing monthly updates."
 
+	python $servo l u
+
 	echo "Fetching the list of available updates."
 	apt-get update -y -qq
 	echo "Fetching complete."
@@ -319,8 +321,5 @@ do
 
 	echo -e "//////////////////////////////////////////////////\n" >> $logFile
 
-	if [ $oldPrevState != $prevState ]
-	then
-		sleep 3
-	fi
+	sleep 5
 done
