@@ -3,6 +3,7 @@ from flask import request, Response
 from passlib.hash import pbkdf2_sha256
 
 username = 'admin'
+pw_file = '/Smart_Lock/Frontend/password.txt'
 
 #password should always be a hash
 password = ''
@@ -31,7 +32,7 @@ def requires_auth(f):
 
 def set_password(password_to_set):
     password = _hash(password_to_set)
-    pw_file = open('password.txt', 'w')
+    pw_file = open(pw_file, 'w')
     pw_file.write(password)
     pw_file.close()
 
@@ -44,6 +45,6 @@ def _verify(password_to_verify):
 
 
 try:
-    password = open('password.txt').read()
+    password = open(pw_file).read()
 except:
     set_password('password')

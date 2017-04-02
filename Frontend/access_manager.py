@@ -1,6 +1,6 @@
 users = {}
-acl_location = 'acl.txt'
-update_location = 'update.txt'
+acl_location = '/Smart_Lock/Frontend/acl.txt'
+update_location = '/Smart_Lock/Frontend/update.txt'
 
 def remove_entry(key):
 	del users[key]
